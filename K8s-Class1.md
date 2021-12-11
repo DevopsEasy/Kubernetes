@@ -18,10 +18,13 @@
 
 * [Refer Here](https://kubernetes.io/docs/concepts/overview/components/) for official documentation on kubernetes components
 * Basic components of k8s
+
 ![Preview](./Images/cluster.png)
+
 * k8s cluster communication
 
 ![Preview](./Images/kube1.png)
+
 ![Preview](./Images/k8s1.png)
 
 ## Installing Kubernetes
@@ -52,7 +55,9 @@ minikube start
 ![Preview](./Images/k8s2.png)
 
 * Check the nodes
+
 ![Preview](./Images/k8s3.png)
 
 * Check all the pods
+
 ![Preview](./Images/k8s4.png)
