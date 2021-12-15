@@ -1,5 +1,20 @@
 ## Pods Contd
 * kubectl port-forward was not working. To fix this we need to use the –address
+* Hello pod yaml file 
+
+```yaml
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: hello-pod
+spec:
+  containers:
+    - image: jenkins/jenkins
+      name: jenkinscont
+      ports:
+        - containerPort: 8080
+```
 
 ```
 kubectl port-forward <pod-name> <portmapping> --address <private ip>
