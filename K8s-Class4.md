@@ -104,6 +104,9 @@ spec:
           memory: "64G"
           cpu: "16"
 ```
+![Preview](./Images/k8s34.png)
+
+![Preview](./Images/k8s35.png)
 
 ## Kubernetes Pod Lifecycle
 * Pod can have the following states
