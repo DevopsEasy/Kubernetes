@@ -126,7 +126,7 @@ spec:
 ![Preview](./Images/k8s36.png)
 
 * Implementation of Probes
-    * Command Probe: In this probe controller will get the contaienr to execute specific command in order to perform probe on the container.
+    * Command Probe: In this probe controller will get the container to execute specific command in order to perform probe on the container.
     * HTTP Request Probe: In this probe controller will send a GET HTTP request to the give address (host and port) to perform probe on the container. We can set the following fields to configure the HTTP Probe
        * host
        * path
