@@ -83,7 +83,7 @@ kubectl get pods -l {label-selector}
     * equality based
     * set-based
 * Equality based selectors:
-    * In this selector we have three kinds of operators = == !=
+    * In this selector we have three kinds of operators __=, ==, !=__
     * Lets try to get all the pods with the label environment is equal to developer
     
     ![Preview](./Images/k8s49.png)
