@@ -10,7 +10,7 @@ metadata:
     key2: value2
 ```
 * Constraints for Labels:
-    * Label prefix: This is optional and this must be a DNS subdomain. This cannot be longer thatn 253 characters & cannot contain spaces. The label prefix is always followed by a forwar slash Eg: directdevops.blog/. If no prefix is used the label key is assumed to be private to the user. label prefixes specific to k8s core system kubernetes.io/ and k8s.io/
+    * Label prefix: This is optional and this must be a DNS subdomain. This cannot be longer than 253 characters & cannot contain spaces. The label prefix is always followed by a forwar slash Eg: devopseasy.com. If no prefix is used the label key is assumed to be private to the user. label prefixes specific to k8s core system kubernetes.io/ and k8s.io/
     * Label name: The label name is required and can be upto 63 characters long.
 * Value of the key in k8s is label-prefix/label-name or label-name
 
