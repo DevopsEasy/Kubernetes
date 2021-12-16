@@ -113,7 +113,7 @@ metadata:
     project: qt-ecommerce
   annotations:
     commit-id: 3190dd9e231b92f07da29e052a0fbc812ed8c999
-    jira-issue: "https://jira.qualtitythought.in/issue/OP-25"
+    jira-issue: "https://jira.devopseasy.in/issue/OP-25"
 spec:
   containers:
     - name: nginx-container
