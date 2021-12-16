@@ -90,7 +90,7 @@ kubectl get pods -l {label-selector}
 
     ![Preview](./Images/k8s50.png)
 * SET-BASED Selectors
-    * In this we have 3 kinds of operators in notin exists
+    * In this we have 3 kinds of operators __in, notin, exists__
     * Lets try some examples
 
     ![Preview](./Images/k8s51.png)
