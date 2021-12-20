@@ -122,9 +122,9 @@ spec:
 ```
 * Lets create the pod
 
-[Preview](./Images/k8s87.png)
+![Preview](./Images/k8s87.png)
 
-[Preview](./Images/k8s88.png)
+![Preview](./Images/k8s88.png)
 
 * Lets log in into this pod
 
