@@ -8,5 +8,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1GiB
-  volumeMode: FileSystem
+      storage: 1Gi
+  volumeMode: Filesystem
