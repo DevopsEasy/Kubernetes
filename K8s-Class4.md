@@ -188,7 +188,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: liveness-norestart
+  name: liveness-restartalways
 spec:
   restartPolicy: Always
   containers:
