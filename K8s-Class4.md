@@ -235,8 +235,8 @@ spec:
           command:
             - cat
             - /tmp/ready
-      initialDelaySeconds: 10
-      periodSeconds: 5
+        initialDelaySeconds: 10
+        periodSeconds: 5
 ```
 
 ![Preview](./Images/k8s43.png)
