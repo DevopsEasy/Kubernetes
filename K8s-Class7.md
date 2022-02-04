@@ -211,6 +211,4 @@ spec:
 
 ## Next topics
 * ConfigMap and Secrets
-* Azure Kubernetes Services
 * Elastic Kubernetes Services
-* Google Compute Engine
