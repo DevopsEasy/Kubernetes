@@ -40,5 +40,21 @@ kubectl exec -it secret-demo -- /bin/sh
    * Persistent Volume native support to the clouds block and file storage
    * Integrated logging and monitoring support
 
-## Next Topics
-* EKS
+## EKS Cluster Setup
+* [Refer Here](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html) for official docs.
+* Install kubectl, eksctl, configure iam user.
+* To create a cluster execute the below command
+```
+eksctl create cluster \ 
+--name my-cluster \
+--region us-west-2 \
+--with-oidc \
+--ssh-access \
+--ssh-public-key k8s \
+--managed
+```
+* To delete a cluster
+```
+eksctl get cluster
+ekssctl delete cluster <cluster_name>
+```
