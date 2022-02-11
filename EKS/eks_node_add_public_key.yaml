@@ -1,0 +1,44 @@
+# This DaemonSet basically adds your id_rsa.pub to the authorized_keys on the EKS Worker Node EC2.
+# Just save this as a yaml file, replace your public key below and run
+#     $ kubectl apply -f eks_node_add_public_key.yaml
+# Check all the pods are running and as soon as they are running, you can remove the set:
+#     $ kubectl delete -f eks_node_add_public_key.yaml
+#
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    k8s-app: ec2-public-key
+  name: ec2-public-key
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      k8s-app: ec2-public-key
+  template:
+    metadata:
+      labels:
+        k8s-app: ec2-public-key
+    spec:
+      containers:
+      - image: amazonlinux
+        imagePullPolicy: Always
+        name: ec2pubkey
+        command: ["/bin/bash"]
+        args: ["-c","echo 'ssh-rsa <YOUR_ID_RSA_PUB_KEY> me@me.com' >> /etc/ec2home/.ssh/authorized_keys && chown -R 1000:1000 /etc/ec2home/.ssh && chmod 600  /etc/ec2home/.ssh/authorized_keys && sleep 5000"]
+        securityContext:
+          allowPrivilegeEscalation: true
+        volumeMounts:
+        - mountPath: /etc/ec2home
+          name: ec2home    
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      volumes:
+      - name: ec2home
+        hostPath:
+          path: /home/ec2-user
+          type: Directory  
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
