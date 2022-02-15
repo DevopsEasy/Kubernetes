@@ -1,6 +1,6 @@
 ## Devops CI/CD Pipeline
 
-![Preview](./pipeline.png)
+![Preview](./Images/pipeline.png)
 
 ## Source Code: GIT Necessary Sotwares
 * GIT, Java, Maven, Docker, K8s, Jenkins
